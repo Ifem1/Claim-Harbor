@@ -60,7 +60,7 @@ export function ClaimBeacon({ policy, onSubmit }: ClaimBeaconProps) {
         </div>
       </div>
 
-      {state === 'success' || state === 'requesting_verdict' ? (
+      {state === 'success' ? (
         <div className="py-8 text-center space-y-2">
           <p className="text-sm font-semibold" style={{ color: 'var(--payout-mint)' }}>Claim submitted</p>
           <p className="text-xs font-mono" style={{ color: 'var(--salt-grey)' }}>Requesting validator verdict… redirecting.</p>
