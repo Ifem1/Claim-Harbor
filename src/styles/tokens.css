@@ -1,0 +1,40 @@
+:root {
+  /* Harbor palette */
+  --deep-harbor: #050D1A;
+  --dock-steel: #0E1E30;
+  --tide-blue: #2563EB;
+  --beacon-cyan: #22D3EE;
+  --signal-amber: #F59E0B;
+  --payout-mint: #34D399;
+  --reef-red: #EF4444;
+  --fog-white: #F0F6FF;
+  --salt-grey: #7A8FA8;
+  --ledger-ink: #050D1A;
+
+  /* Semantic */
+  --bg: var(--deep-harbor);
+  --surface: var(--dock-steel);
+  --surface-soft: #1a2a40;
+  --text-primary: var(--fog-white);
+  --text-muted: var(--salt-grey);
+  --border: rgba(248, 250, 252, 0.08);
+  --accent: var(--beacon-cyan);
+  --accent-blue: var(--tide-blue);
+  --accent-green: var(--payout-mint);
+  --accent-red: var(--reef-red);
+  --accent-amber: var(--signal-amber);
+  --glass: rgba(255, 255, 255, 0.03);
+  --line: rgba(248, 250, 252, 0.08);
+
+  /* Legacy aliases for remaining refs */
+  --vault-black: var(--deep-harbor);
+  --fog-panel: var(--dock-steel);
+  --fog-panel-soft: var(--surface-soft);
+  --paper-white: var(--fog-white);
+  --muted-steel: var(--salt-grey);
+  --bond-gold: var(--signal-amber);
+  --signal-blue: var(--tide-blue);
+  --verdict-green: var(--payout-mint);
+  --challenge-red: var(--reef-red);
+  --electric-violet: #8B5CF6;
+}

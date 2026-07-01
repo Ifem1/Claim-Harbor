@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "../src/styles/tokens.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-ibm-plex-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: var(--deep-harbor);
+  --foreground: var(--fog-white);
+  --card: var(--dock-steel);
+  --card-foreground: var(--fog-white);
+  --popover: var(--dock-steel);
+  --popover-foreground: var(--fog-white);
+  --primary: var(--beacon-cyan);
+  --primary-foreground: var(--ledger-ink);
+  --secondary: #1a2a40;
+  --secondary-foreground: var(--fog-white);
+  --muted: #1a2a40;
+  --muted-foreground: var(--salt-grey);
+  --accent: var(--beacon-cyan);
+  --accent-foreground: var(--ledger-ink);
+  --destructive: var(--reef-red);
+  --border: rgba(248, 250, 252, 0.08);
+  --input: rgba(248, 250, 252, 0.07);
+  --ring: var(--beacon-cyan);
+  --radius: 0.5rem;
+  --chart-1: var(--beacon-cyan);
+  --chart-2: var(--payout-mint);
+  --chart-3: var(--tide-blue);
+  --chart-4: var(--signal-amber);
+  --chart-5: var(--reef-red);
+  --sidebar: var(--ledger-ink);
+  --sidebar-foreground: var(--fog-white);
+  --sidebar-primary: var(--beacon-cyan);
+  --sidebar-primary-foreground: var(--ledger-ink);
+  --sidebar-accent: var(--dock-steel);
+  --sidebar-accent-foreground: var(--fog-white);
+  --sidebar-border: rgba(248, 250, 252, 0.08);
+  --sidebar-ring: var(--beacon-cyan);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--deep-harbor);
+  color: var(--fog-white);
+  font-family: var(--font-space-grotesk), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-ibm-plex-mono), 'Courier New', monospace;
+}
+
+.glass-panel {
+  background: var(--glass);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
+
+/* Glow utilities */
+.glow-cyan {
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.15), 0 4px 24px rgba(34, 211, 238, 0.06), 0 1px 4px rgba(0,0,0,0.4);
+}
+.glow-cyan:hover {
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.28), 0 8px 32px rgba(34, 211, 238, 0.12), 0 2px 8px rgba(0,0,0,0.5);
+}
+.glow-mint {
+  box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.18), 0 4px 20px rgba(52, 211, 153, 0.08);
+}
+.glow-amber {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.18), 0 4px 20px rgba(245, 158, 11, 0.08);
+}
+.card {
+  background: var(--dock-steel);
+  border: 1px solid rgba(34, 211, 238, 0.07);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.03);
+  border-radius: 14px;
+}
+.card:hover {
+  border-color: rgba(34, 211, 238, 0.14);
+  box-shadow: 0 4px 28px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.04);
+}
