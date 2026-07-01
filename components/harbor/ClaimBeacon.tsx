@@ -14,7 +14,7 @@ interface ClaimBeaconProps {
   }) => Promise<void>
 }
 
-type SubmitState = 'idle' | 'awaiting_signature' | 'requesting_verdict' | 'success' | 'failed'
+type SubmitState = 'idle' | 'awaiting_signature' | 'success' | 'failed'
 
 export function ClaimBeacon({ policy, onSubmit }: ClaimBeaconProps) {
   const [summary, setSummary] = useState('')
@@ -128,7 +128,6 @@ export function ClaimBeacon({ policy, onSubmit }: ClaimBeaconProps) {
           >
             {state === 'idle' && 'Send Distress Signal'}
             {state === 'awaiting_signature' && 'Submitting claim…'}
-            {state === 'requesting_verdict' && 'Requesting verdict…'}
             {state === 'failed' && 'Failed — retry'}
           </button>
         </form>
